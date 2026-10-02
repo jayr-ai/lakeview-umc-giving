@@ -6,9 +6,9 @@ real photos are dropped in. Run with: python3 tools_generate_placeholders.py
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-NAVY = (14, 46, 87)       # #0E2E57
+NAVY = (14, 46, 87)       # #0E2E57 - matches thelakeviewumc.com --lake-900
 NAVY_DEEP = (8, 28, 54)   # darker navy for gradient end
-GOLD = (196, 155, 85)     # warm refined gold
+GOLD = (216, 163, 64)     # #D8A340 - matches thelakeviewumc.com --gold
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "assets", "images")
 
@@ -27,7 +27,7 @@ SLOTS = [
     ("story-1.jpg", 800, 800, "Story Coming Soon"),
     ("story-2.jpg", 800, 800, "Story Coming Soon"),
     ("story-3.jpg", 800, 800, "Story Coming Soon"),
-    ("og-image.jpg", 1200, 630, "Lakeview UMC — Ministry Partners"),
+    ("og-image.jpg", 1200, 630, "Lakeview UMC - Ministry Partners"),
 ]
 
 def load_font(size):

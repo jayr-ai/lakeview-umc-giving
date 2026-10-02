@@ -4,15 +4,19 @@
    ========================================================================== */
 
 :root {
+  /* Matched to the live thelakeviewumc.com design tokens (--lake-900, --gold,
+     --flame, --paper, --ink, --muted, --line, --serif, --sans) so this page
+     reads as the same brand, not a lookalike. */
   --navy: #0E2E57;
   --navy-deep: #081C36;
-  --navy-soft: #1B4075;
-  --gold: #C49B55;
-  --gold-light: #E6D5AE;
-  --cream: #FAF7F1;
-  --ink: #1A1D23;
-  --ink-soft: #4A5160;
-  --border: #E4E2DC;
+  --navy-soft: #16467F;
+  --flame: #EE5A2A;
+  --gold: #D8A340;
+  --gold-light: #ECD3A0;
+  --cream: #F5F0E3;
+  --ink: #14243D;
+  --ink-soft: #566B86;
+  --border: #E4DECE;
   --white: #FFFFFF;
 
   --max-width: 1140px;
@@ -23,7 +27,8 @@
   --shadow-sm: 0 2px 10px rgba(14, 46, 87, 0.08);
   --shadow-md: 0 12px 30px rgba(14, 46, 87, 0.14);
 
-  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-base: "Avenir Next", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Hoefler Text", "Palatino Linotype", Palatino, Georgia, serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -58,10 +63,11 @@ a {
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-weight: 600;
   line-height: 1.2;
   margin: 0 0 0.5em;
-  color: var(--navy);
+  color: var(--ink);
 }
 
 h1 { font-size: clamp(2rem, 5vw + 1rem, 3.4rem); }
@@ -118,24 +124,25 @@ details:focus-visible {
 
 .btn {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 13.6px 24px;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: var(--font-base);
   text-decoration: none;
   text-align: center;
   border: 2px solid transparent;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 .btn:hover { transform: translateY(-1px); }
 
 .btn-gold {
-  background: var(--gold);
-  color: var(--navy-deep);
+  background: var(--flame);
+  color: var(--white);
   box-shadow: var(--shadow-sm);
 }
-.btn-gold:hover { background: #d4ab63; box-shadow: var(--shadow-md); }
+.btn-gold:hover { background: #d94e1f; box-shadow: var(--shadow-md); }
 
 .btn-navy {
   background: var(--navy);
@@ -222,8 +229,8 @@ details:focus-visible {
 
 .nav-cta {
   margin-top: 8px;
-  background: var(--gold);
-  color: var(--navy-deep) !important;
+  background: var(--flame);
+  color: var(--white) !important;
   border-radius: 999px;
   text-align: center;
   border-bottom: none !important;
@@ -292,7 +299,7 @@ details:focus-visible {
   letter-spacing: 1.5px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--gold-light);
+  color: var(--flame);
   margin-bottom: 14px;
 }
 

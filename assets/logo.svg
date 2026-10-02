@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-labelledby="logoTitle">
   <title id="logoTitle">Lakeview UMC</title>
-  <!-- PLACEHOLDER WORDMARK: replace this file with the real cross-and-flame
-       mark + wordmark once the official logo is ready. Keep the filename
-       and viewBox-friendly proportions the same so it drops in cleanly. -->
-  <g>
-    <!-- simple cross placeholder standing in for the UMC cross-and-flame -->
-    <rect x="14" y="10" width="6" height="30" fill="#C49B55" />
-    <rect x="4" y="20" width="26" height="6" fill="#C49B55" />
+  <!-- PLACEHOLDER MARK: stylized approximation of the United Methodist
+       cross-and-flame, evoking the mark used at thelakeviewumc.com/images/umc-logo.png.
+       Replace with that same official asset (or the church's preferred
+       format of it) when ready - keep the filename and viewBox-friendly
+       proportions the same so it drops in cleanly. -->
+  <g transform="translate(6, 6)">
+    <path d="M20 4 C10 9, 6 19, 10 29 C12 35, 16 39, 17 49 C13 43, 7 37, 7 27 C7 15, 13 7, 20 4 Z" fill="#D8232A" />
+    <rect x="18" y="2" width="4" height="48" fill="#14243D" />
+    <rect x="8" y="19" width="22" height="4" fill="#14243D" />
   </g>
-  <text x="42" y="28" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#0E2E57">Lakeview</text>
-  <text x="42" y="48" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" fill="#C49B55">UNITED METHODIST CHURCH</text>
+  <text x="46" y="30" font-family="'Iowan Old Style','Hoefler Text','Palatino Linotype',Palatino,Georgia,serif" font-size="22" font-weight="600" fill="#14243D">Lakeview</text>
+  <text x="46" y="48" font-family="'Avenir Next','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="12" letter-spacing="2" fill="#566B86">UNITED METHODIST CHURCH</text>
 </svg>
