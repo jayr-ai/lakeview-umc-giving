@@ -337,67 +337,6 @@ details:focus-visible {
 }
 
 /* ==========================================================================
-   Stats
-   ========================================================================== */
-
-.stats-grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr;
-  margin-bottom: 32px;
-}
-
-@media (min-width: 720px) {
-  .stats-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-.stat-tile {
-  background: var(--navy);
-  color: var(--white);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
-}
-
-.stats-breakdown {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  text-align: center;
-}
-@media (min-width: 720px) {
-  .stats-breakdown { grid-template-columns: repeat(4, 1fr); }
-}
-.stats-breakdown div {
-  padding: 16px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-.stats-breakdown strong {
-  display: block;
-  font-size: 1.6rem;
-  color: var(--navy);
-}
-.stats-breakdown span {
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-}
-
-/* ==========================================================================
    Discipleship system list
    ========================================================================== */
 
