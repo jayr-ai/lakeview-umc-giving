@@ -318,6 +318,75 @@ details:focus-visible {
   gap: 14px;
 }
 
+.hero-short {
+  min-height: 46vh;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--gold-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ==========================================================================
+   Ministry detail pages
+   ========================================================================== */
+
+.detail-highlights {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.detail-highlights li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--ink-soft);
+}
+.detail-highlights li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--flame);
+  font-weight: 700;
+}
+
+.cost-callout {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 0 0 32px;
+}
+.cost-callout h2 { margin-bottom: 8px; font-size: 1.05rem; }
+.cost-callout p { margin: 0; }
+.cost-callout strong { color: var(--navy); }
+
+.detail-gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0 0 40px;
+}
+@media (min-width: 640px) {
+  .detail-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+.detail-gallery img {
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.detail-cta {
+  text-align: center;
+}
+
 /* ==========================================================================
    Sections (generic)
    ========================================================================== */
@@ -387,16 +456,22 @@ details:focus-visible {
 }
 
 .ministry-card {
+  display: block;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--white);
   box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .ministry-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+.ministry-card:hover .ministry-more {
+  text-decoration: underline;
 }
 
 .ministry-card img {
@@ -414,14 +489,11 @@ details:focus-visible {
 }
 .ministry-body strong { color: var(--navy); }
 
-.ministry-annual {
+.ministry-more {
   display: inline-block;
-  background: var(--gold-light);
-  color: var(--navy-deep);
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: 999px;
+  color: var(--flame);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 /* ==========================================================================

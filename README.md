@@ -1,9 +1,14 @@
 # Lakeview UMC - Ministry Partner Page
 
-A single, fast, static landing page inviting people, companies, churches,
-and institutions to become financial Ministry Partners of Lakeview United
-Methodist Church (@RockforJesus). Plain HTML/CSS/JS - no build step, no
-framework, no backend.
+A fast, static site inviting people, companies, churches, and institutions
+to become financial Ministry Partners of Lakeview United Methodist Church
+(@RockforJesus). Plain HTML/CSS/JS - no build step, no framework, no
+backend. A homepage plus 9 ministry detail pages (one per ministry card),
+so specific amounts live on the detail pages rather than the first thing a
+visitor sees.
+
+**Live at:** https://give.thelakeviewumc.com/
+**Repo:** https://github.com/jayr-ai/lakeview-umc-giving
 
 ## Preview locally
 
@@ -21,12 +26,12 @@ server more closely matches how GitHub Pages serves the real site.
 ## How GitHub Pages deployment works for this repo
 
 This follows the same pattern as the church's main site,
-`thelakeviewumc.com`.
+`thelakeviewumc.com`. Already done for this repo - notes kept here for
+reference or if this ever needs to be redeployed elsewhere.
 
-1. Push this folder's contents to a GitHub repository (owner/org:
-   **[FILL IN - GitHub username or org]**).
+1. Push this folder's contents to a GitHub repository. (Done: `jayr-ai/lakeview-umc-giving`.)
 2. In that repo's **Settings -> Pages**, set the source to deploy from the
-   `main` branch, root (`/`) folder.
+   `main` branch, root (`/`) folder. (Done.)
 3. The `CNAME` file already in this repo's root (containing
    `give.thelakeviewumc.com`) tells GitHub Pages which custom domain to
    serve the site on - keep that file as-is.
@@ -36,15 +41,54 @@ This follows the same pattern as the church's main site,
 
 ## DNS record needed
 
-Ask whoever manages DNS for `thelakeviewumc.com` to add:
+DNS is already pointed and propagated. For reference, the record added was:
 
 - **Type:** CNAME
 - **Host/Name:** `give`
-- **Value/Target:** `<github-username-or-org>.github.io` - **[FILL IN once the GitHub repo/org is created]**
-- **TTL:** default/automatic is fine
+- **Value/Target:** `jayr-ai.github.io`
+- **TTL:** default/automatic
 
 This points `give.thelakeviewumc.com` at GitHub Pages, matching the pattern
 already used for the main site.
+
+## Ministry detail pages
+
+Each ministry card on the homepage links to its own page, so the
+homepage grid can stay warm and amount-free while the real cost lives
+where it belongs - after enough context has been given:
+
+| Ministry | Live page |
+|---|---|
+| Youth Connect | `/youthconnect/` |
+| Kids Connect | `/kidsconnect/` |
+| Kids Sunday School | `/kidssundayschool/` |
+| MYAF Connect | `/myafconnect/` |
+| Pick Up Ministry | `/pickupministry/` |
+| Sunday Celebration | `/sundaycelebration/` |
+| Encounter Retreat | `/encounterretreat/` |
+| Leaders & Volunteers Night | `/leadersnight/` |
+| LANDASIN Graduation | `/landasingraduation/` |
+
+Each page has a hero banner, an "About" paragraph, a short highlights
+list, a "What your partnership provides" cost callout, a 2-photo gallery,
+and a "Become a Ministry Partner" button back to the homepage's giving
+section.
+
+**These 9 pages are generated, not hand-written.** They all come from one
+shared template in [`tools_generate_ministry_pages.py`](./tools_generate_ministry_pages.py),
+driven by a `MINISTRIES` data list at the top of that file (title,
+tagline, about paragraph, highlights, cost line, image filenames). To
+change a ministry page's copy:
+
+1. Edit that ministry's entry in the `MINISTRIES` list in
+   `tools_generate_ministry_pages.py`.
+2. Re-run `python3 tools_generate_ministry_pages.py` - this overwrites
+   all 9 `<slug>/index.html` files from the template.
+3. Commit and push the regenerated files.
+
+Editing a generated `<slug>/index.html` file directly works too for a
+one-off tweak, but it will be overwritten the next time the generator
+script runs.
 
 ## Where to drop in real photos
 
@@ -112,7 +156,6 @@ Two alternates were considered and can be swapped in instead by editing the
 
 ## Placeholders still needing real content before launch
 
-- [ ] GitHub username/org for deployment + DNS target (see above)
 - [ ] Real PayMongo links for all 3 giving types (`js/main.js`)
 - [ ] Confirm PayMongo Payment Link reusability (see decision above)
 - [ ] Real church logo at `/assets/logo.svg`
@@ -127,15 +170,25 @@ Two alternates were considered and can be swapped in instead by editing the
 
 ```
 lakeview-umc-giving/
-  index.html                     the whole page
-  css/styles.css                 all styling
-  js/main.js                     PayMongo link config + nav/reveal/toggle behavior
-  assets/logo.svg                church logo (placeholder wordmark for now)
-  assets/images/                 all photo placeholders (see PHOTOS.md)
-  tools_generate_placeholders.py script that generated the placeholder images (not deployed; safe to ignore/delete)
-  CNAME                          GitHub Pages custom domain config
-  PHOTOS.md                      full photo manifest
-  README.md                      this file
+  index.html                        the homepage
+  youthconnect/index.html           ministry detail page (generated, see below)
+  kidsconnect/index.html            ...and 7 more ministry detail pages,
+  kidssundayschool/index.html       one folder per ministry, same pattern
+  myafconnect/index.html
+  pickupministry/index.html
+  sundaycelebration/index.html
+  encounterretreat/index.html
+  leadersnight/index.html
+  landasingraduation/index.html
+  css/styles.css                    all styling, shared by every page
+  js/main.js                        PayMongo link config + nav/reveal/toggle behavior
+  assets/logo.svg                   church logo (placeholder wordmark for now)
+  assets/images/                    all photo placeholders (see PHOTOS.md)
+  tools_generate_placeholders.py    script that generated the placeholder images (not deployed; safe to ignore/delete)
+  tools_generate_ministry_pages.py  script that generates the 9 detail pages (see "Ministry detail pages" above)
+  CNAME                             GitHub Pages custom domain config
+  PHOTOS.md                         full photo manifest
+  README.md                         this file
 ```
 
 ## Editing copy without breaking layout

@@ -18,6 +18,15 @@ the placeholder automatically - no code changes needed.
 | `/assets/images/encounter-retreat.jpg` | Encounter Retreat ministry card | Landscape, 4:3 |
 | `/assets/images/leaders-night.jpg` | Leaders and Volunteers Appreciation Night ministry card | Landscape, 4:3 |
 | `/assets/images/landasin-graduation.jpg` | LANDASIN Graduation ministry card | Landscape, 4:3 |
+| `/assets/images/youth-connect-2.jpg` | Youth Connect detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/kids-connect-2.jpg` | Kids Connect detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/kids-sunday-school-2.jpg` | Kids Sunday School detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/myaf-connect-2.jpg` | MYAF Connect detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/pickup-ministry-2.jpg` | Pick Up Ministry detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/sunday-celebration-2.jpg` | Sunday Celebration detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/encounter-retreat-2.jpg` | Encounter Retreat detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/leaders-night-2.jpg` | Leaders & Volunteers Night detail page, second gallery photo | Landscape, 4:3 |
+| `/assets/images/landasin-graduation-2.jpg` | LANDASIN Graduation detail page, second gallery photo | Landscape, 4:3 |
 | `/assets/images/story-1.jpg` | Testimonial 1 photo | Square, 1:1 |
 | `/assets/images/story-2.jpg` | Testimonial 2 photo | Square, 1:1 |
 | `/assets/images/story-3.jpg` | Testimonial 3 photo | Square, 1:1 |

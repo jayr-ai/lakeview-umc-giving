@@ -27,6 +27,16 @@ SLOTS = [
     ("story-1.jpg", 800, 800, "Story Coming Soon"),
     ("story-2.jpg", 800, 800, "Story Coming Soon"),
     ("story-3.jpg", 800, 800, "Story Coming Soon"),
+    # second gallery photo for each ministry detail page
+    ("youth-connect-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("kids-connect-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("kids-sunday-school-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("myaf-connect-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("pickup-ministry-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("sunday-celebration-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("encounter-retreat-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("leaders-night-2.jpg", 1200, 900, "More Photos Coming Soon"),
+    ("landasin-graduation-2.jpg", 1200, 900, "More Photos Coming Soon"),
     ("og-image.jpg", 1200, 630, "Lakeview UMC - Ministry Partners"),
 ]
 
